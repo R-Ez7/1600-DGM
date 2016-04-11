@@ -1,4 +1,4 @@
 sceneSetups:
-- path: C:/Users/10433084/Desktop/Final Project 1600/Assets/AngryRolling Head.unity
+- path: Assets/moving dude.unity
   isLoaded: 1
   isActive: 1
