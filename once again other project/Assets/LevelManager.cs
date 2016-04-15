@@ -14,6 +14,9 @@ public class LevelManager : MonoBehaviour {
 	//respawn delay
 	public float respawnDelay;
 
+	//Store Gravity Value
+	private float gravityStore;
+
 
 	// Use this for initialization
 	void Start () {
@@ -49,11 +52,20 @@ public class LevelManager : MonoBehaviour {
 		player.enabled = false;
 		player.GetComponent<Renderer> ().enabled = false;
 
+		//Gravity Reset
+		gravityStore = player.GetComponent<Rigidbody2D> ().gravityScale;
+		player.GetComponent<Rigidbody2D> ().gravityScale = 0f;
+		player.GetComponent<Rigidbody2D> ().velocity = Vector2.zero;
+
 		//Debug Message
 		Debug.Log("Player has Respawned!");
 
 		//Respawn Delay
 		yield return new WaitForSeconds (respawnDelay);
+
+		//Gravity Restore
+		player.GetComponent<Rigidbody2D>().gravityScale = gravityStore;
+
 
 		//Moves player to current check point
 		player.transform.position = currentCheckPoint.transform.position;
