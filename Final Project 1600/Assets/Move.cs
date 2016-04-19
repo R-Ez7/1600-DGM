@@ -30,10 +30,10 @@ public class Move : MonoBehaviour {
 	void Update () {
 		//players sprite is flip!!!!!!!!!!!!!!
 		if (GetComponent<Rigidbody2D> ().velocity.x > 0)
-			transform.localScale = new Vector3 (2f, 2f, 2f);
+			transform.localScale = new Vector3 (1f, 1f, 2f);
 
 		else if (GetComponent<Rigidbody2D> ().velocity.x < 0)
-			transform.localScale = new Vector3 (-2f, 2f, 2f);
+			transform.localScale = new Vector3 (-1f, 1f, 1f);
 
 
 		//this is for moving the character

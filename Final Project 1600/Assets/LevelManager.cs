@@ -7,6 +7,17 @@ public class LevelManager : MonoBehaviour {
 	private Move player;
 
 
+	//particles
+	public GameObject deathParticle;
+	public GameObject respawnParticles;
+
+	//respawn delay
+	public float respawnDelay;
+
+	//Store Gravity Value
+	private float gravityStore;
+
+
 	// Use this for initialization
 	void Start () {
 		player = FindObjectOfType<Move> ();
@@ -21,8 +32,50 @@ public class LevelManager : MonoBehaviour {
 
 	//Respawn Player
 	public void RespawnPlayer(){
+		StartCoroutine ("RespawnPlayerCo");
+
+		//generate death particles
+//		Instantiate(deathParticle, player.transform.position, player.transform.rotation);
+
+//		Debug.Log("Player has Respawned!");
+//		player.transform.position = currentCheckPoint.transform.position;
+
+		//generate respawn particles
+//		Instantiate(respawnParticles, player.transform.position, player.transform.rotation);
+	}
+
+	public IEnumerator RespawnPlayerCo() {
+		//generate death particles
+		Instantiate(deathParticle, player.transform.position, player.transform.rotation);
+
+		//Hide Player
+		player.enabled = false;
+		player.GetComponent<Renderer> ().enabled = false;
+
+		//Gravity Reset
+		gravityStore = player.GetComponent<Rigidbody2D> ().gravityScale;
+		player.GetComponent<Rigidbody2D> ().gravityScale = 0f;
+		player.GetComponent<Rigidbody2D> ().velocity = Vector2.zero;
+
+		//Debug Message
 		Debug.Log("Player has Respawned!");
+
+		//Respawn Delay
+		yield return new WaitForSeconds (respawnDelay);
+
+		//Gravity Restore
+		player.GetComponent<Rigidbody2D>().gravityScale = gravityStore;
+
+
+		//Moves player to current check point
 		player.transform.position = currentCheckPoint.transform.position;
+
+		//Show player
+		player.enabled = true;
+		player.GetComponent<Renderer> ().enabled = true;
+
+		//generate respawn particles
+		Instantiate(respawnParticles, player.transform.position, player.transform.rotation);	
 	}
 
 }

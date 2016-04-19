@@ -27,6 +27,7 @@ public class ScoreManager : MonoBehaviour {
 	}
 
 	public static void AddPoints (int pointsTOAdd) {
+//		int pointsForKill;
 		score += pointsTOAdd;
 
 //		score + pointsTOAdd = score;
