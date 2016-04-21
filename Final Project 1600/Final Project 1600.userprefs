@@ -1,10 +1,10 @@
-﻿<Properties StartupItem="Final Project 1600.CSharp.csproj">
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\ScoreManager.cs">
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\KillPlayer.cs">
     <Files>
+      <File FileName="Assets\KillPlayer.cs" Line="1" Column="1" />
       <File FileName="Assets\checkpoints.cs" Line="19" Column="27" />
       <File FileName="Assets\EnemyPatrol.cs" Line="1" Column="1" />
-      <File FileName="Assets\KillPlayer.cs" Line="21" Column="20" />
       <File FileName="Assets\LevelManager.cs" Line="1" Column="1" />
       <File FileName="Assets\pickup.cs" Line="1" Column="1" />
       <File FileName="Assets\poison.cs" Line="1" Column="1" />
