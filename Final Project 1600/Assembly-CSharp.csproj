@@ -45,16 +45,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\EnemyPatrol.cs" />
-     <Compile Include="Assets\KillPlayer.cs" />
-     <Compile Include="Assets\LevelManager.cs" />
-     <Compile Include="Assets\Projectile.cs" />
-     <Compile Include="Assets\ScoreManager.cs" />
+     <Compile Include="Assets\Script\CameraMove.cs" />
+     <Compile Include="Assets\Script\EnemyPatrol.cs" />
+     <Compile Include="Assets\Script\KillPlayer.cs" />
+     <Compile Include="Assets\Script\LevelManager.cs" />
      <Compile Include="Assets\Script\Move.cs" />
      <Compile Include="Assets\Script\PlayerShoot.cs" />
-     <Compile Include="Assets\checkpoints.cs" />
-     <Compile Include="Assets\pickup.cs" />
-     <Compile Include="Assets\poison.cs" />
+     <Compile Include="Assets\Script\Projectile.cs" />
+     <Compile Include="Assets\Script\ScoreManager.cs" />
+     <Compile Include="Assets\Script\checkpoints.cs" />
+     <Compile Include="Assets\Script\pickup.cs" />
+     <Compile Include="Assets\Script\poison.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
