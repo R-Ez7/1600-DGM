@@ -57,7 +57,7 @@ public class LevelManager : MonoBehaviour {
 		yield return new WaitForSeconds (respawnDelay);
 
 		//Gravity Restore
-		player.GetComponent<Rigidbody2D>().gravityScale = gravityStore;
+		player.GetComponent<Rigidbody2D>().gravityScale = 1;
 
 
 		//Moves player to current check point

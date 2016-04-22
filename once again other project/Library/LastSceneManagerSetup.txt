@@ -1,5 +1,5 @@
 sceneSetups:
-- path: C:/Users/10433084/Documents/1600 DGM/Final Project 1600/Assets/AngryRolling
+- path: C:/Users/10433084/Documents/1600-DGM/Final Project 1600/Assets/AngryRolling
     Head.unity
   isLoaded: 1
   isActive: 1
